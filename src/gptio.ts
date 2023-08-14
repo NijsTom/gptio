@@ -52,7 +52,7 @@ class GPTIO {
       this.actions.push({
         name: "evaluate",
         description:
-          "Evaluates a JavaScript expression and returns the result. Variables using let, const, var, etcetera are not supported. Functions are not supported, but you can use the self-executing function syntax ( ... )() to run a function.",
+          "Evaluates a JavaScript expression and returns the result. Code must be contained in a self-executing function in order to work.",
         func: ({ code }: { code: string }) => safeEval(code),
         inputs: [
           {
